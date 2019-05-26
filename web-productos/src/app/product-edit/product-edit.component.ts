@@ -16,6 +16,7 @@ export class ProductEditComponent implements OnInit {
   prod_name:string='';
   prod_desc:string='';
   prod_price:number=null;
+  prod_img:string;
   isLoadingResults = false;
 
   constructor(private router: Router, private route: ActivatedRoute,
@@ -26,9 +27,9 @@ export class ProductEditComponent implements OnInit {
     this.productForm = this.formBuilder.group({
     'prod_name' : [null, Validators.required],
     'prod_desc' : [null, Validators.required],
-    'prod_price' : [null, Validators.required]
+    'prod_price' : [null, Validators.required],
+    'prod_img': [null, Validators.required]
   });
-    
   }
 
   getProduct(id) {
@@ -37,7 +38,8 @@ export class ProductEditComponent implements OnInit {
       this.productForm.setValue({
         prod_name: data.prod_name,
         prod_desc: data.prod_desc,
-        prod_price: data.prod_price
+        prod_price: data.prod_price,
+        prod_img: data.prod_img
       });
     });
   }
