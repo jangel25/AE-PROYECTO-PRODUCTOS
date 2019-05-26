@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductCatComponent } from './product-cat/product-cat.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +21,9 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from "@angular/material";
+  MatFormFieldModule, 
+  MatGridListModule,
+  MatChipsModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import {
     ProductsComponent,
     ProductAddComponent,
     ProductDetailComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductCatComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import {
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatGridListModule,
+    MatChipsModule,
     MatFormFieldModule
   ],
   providers: [],
