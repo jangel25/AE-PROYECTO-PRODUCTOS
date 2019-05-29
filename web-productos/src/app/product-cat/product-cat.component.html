@@ -1,0 +1,21 @@
+<h1 style="text-align:center;background-color:orange">Catálogo de productos</h1>
+<mat-grid-list cols=3>
+    <mat-grid-tile *ngFor="let d of data" >
+            <mat-card class="example-card" sytle="text-align:center">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{d.prod_name}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="{{d.prod_img}}">
+                    <mat-card-content>
+                      <p>
+                        {{d.prod_desc}}
+                      </p>
+                    </mat-card-content>
+                    <mat-chip-list>
+                      <mat-chip color="accent" selected>${{d.prod_price}}</mat-chip>
+                      <mat-chip color="primary" selected>Añadir al carrito</mat-chip>
+                    </mat-chip-list>
+                  </mat-card>                          
+    </mat-grid-tile>
+</mat-grid-list>

@@ -29,6 +29,13 @@
           <span *ngIf="!productForm.get('prod_price').valid && productForm.get('prod_price').touched">Please enter Product Price</span>
         </mat-error>
       </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Product Img" formControlName="prod_img"
+               [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!productForm.get('prod_img').valid && productForm.get('prod_img').touched">Please enter Product Img url</span>
+        </mat-error>
+      </mat-form-field>
       <div class="button-row">
         <button type="submit" [disabled]="!productForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
       </div>

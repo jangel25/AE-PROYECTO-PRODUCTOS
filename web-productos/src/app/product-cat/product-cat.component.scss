@@ -1,0 +1,23 @@
+.example-card {
+  width: 250px;
+  justify-items: center;
+  justify-content: center;
+}
+  
+.example-header-image {
+  background-image: url('http://www.liberaldictionary.com/wp-content/uploads/2019/02/icon-0326.jpg');
+  background-size: cover;
+}
+
+
+mat-card img{
+  object-fit:contain;
+  justify-self: center;
+  width: 100%;
+  height: 150px;
+}
+
+mat-card p{
+  max-width:250px;
+  object-fit:contain;
+}
